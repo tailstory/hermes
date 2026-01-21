@@ -1,13 +1,13 @@
 [project]
-name = "darbiadev-hermes"
+name = "tailstory-hermes"
 version = "0.4.0"
 description = "Shipping tooling"
 readme = "README.md"
 authors = [
-    { name = "Bradley Reynolds", email = "bradley.reynolds@darbia.dev" },
+    { name = "Bradley Reynolds", email = "bradley.reynolds@tailstory.dev" },
 ]
 license = { text = "MIT" }
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
     "pydantic-settings>=2.6.0",
     "darbiadev-shipping-types>=0.4.0",
@@ -18,29 +18,39 @@ dependencies = [
 ]
 
 [project.urls]
-repository = "https://github.com/darbiadev/hermes/"
-documentation = "https://docs.darbia.dev/hermes/"
+repository = "https://github.com/tailstory/hermes/"
+documentation = "https://docs.tailstory.dev/hermes/"
 
 [project.scripts]
 hermes = "hermes.cli.main:app"
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
+    # DX
     "nox>=2024.4.15",
-    "pre-commit>=3.7.1",
+    "prek>=0.2.18",
+    # Linters
     "ruff>=0.5.2",
     "mypy>=1.10.1",
+    "ty>=0.0.12",
+    # Types
     "pandas-stubs>=2.2.3.241009",
 ]
 docs = [
     "sphinx>=7.4.4",
+    # Theme
     "furo>=2024.5.6",
+    # Extensions
     "sphinx-autoapi>=3.1.2",
     "releases>=2.1.1",
 ]
 tests = [
-    "pytest>=8.2.2",
+    "coverage>=7.6.1",
+    "pytest>=9.0.0",
+    # Extensions
     "pytest-randomly>=3.15.0",
+    # Reporting
+    "allure-pytest>=2.15.2",
 ]
 
 [build-system]
@@ -48,7 +58,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py314"
 line-length = 120
 
 [tool.ruff.lint]

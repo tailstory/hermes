@@ -3,11 +3,13 @@
 from dataclasses import asdict, dataclass, field
 from enum import Enum
 from logging import getLogger
+from typing import TYPE_CHECKING
 
 from darbia.shipping.types import Address, BillingInfo, Package, Shipment
 from darbia.shipping.types.models import BillToSelector
 
-from hermes.config import Config
+if TYPE_CHECKING:
+    from hermes.config import Config
 
 logger = getLogger(__name__)
 
@@ -158,7 +160,8 @@ def parse_rows(config: Config, rows: list[dict[str, str | float]]) -> list[Impor
         )
         shipment_id = row.get(mapping.get(Columns.REFERENCE))  # type: ignore[arg-type]
 
-        imported_shipment = ImportedShipment(shipment_id=shipment_id, ship_to=address)  # type: ignore[arg-type] # convert the upstream to a dataclass
+        # convert the upstream to a dataclass
+        imported_shipment = ImportedShipment(shipment_id=shipment_id, ship_to=address)  # type: ignore[arg-type] # ty: ignore[unused-ignore-comment
 
         items = {}
         if config.item_column_names is not None:

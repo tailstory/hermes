@@ -1,11 +1,14 @@
 """Handle file related operations."""
 
 import tomllib
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 import pandas as pd
 
-from hermes.parser import OutputRow
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from hermes.parser import OutputRow
 
 
 def get_config_file_contents(path: Path) -> dict[str, str | bool | float]:

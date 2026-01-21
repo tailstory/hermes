@@ -6,7 +6,7 @@ https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 from importlib.metadata import metadata
 
-project_metadata = metadata("darbiadev-hermes")
+project_metadata = metadata("tailstory-hermes")
 project: str = project_metadata["Name"]
 release: str = project_metadata["Version"]
 REPO_LINK: str = project_metadata["Project-URL"].replace("repository, ", "")
@@ -26,7 +26,7 @@ extensions = [
 ]
 
 autoapi_type: str = "python"
-autoapi_dirs: list[str] = ["../../src"]
+autoapi_dirs: list[str] = ["../src"]
 
 intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
 
@@ -53,7 +53,7 @@ releases_github_path = REPO_LINK.removeprefix("https://github.com/")
 releases_release_uri = f"{REPO_LINK}/releases/tag/v%s"
 
 
-def linkcode_resolve(domain: str, info: dict) -> str:
+def linkcode_resolve(domain: str, info: dict) -> str | None:
     """linkcode_resolve."""
     if domain != "py":
         return None

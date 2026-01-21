@@ -62,9 +62,6 @@ jobs:
           annotations: ${{ steps.meta.outputs.annotations }}
           build-args: |
             git_sha=${{ github.sha }}
-          secrets: |
-            cloudsmith_username=${{ secrets.UV_INDEX_CLOUDSMITH_USERNAME }}
-            cloudsmith_password=${{ secrets.UV_INDEX_CLOUDSMITH_PASSWORD }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           provenance: mode=max

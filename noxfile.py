@@ -25,12 +25,6 @@ CLEANABLE_TARGETS = [
 
 
 @nox.session
-def install(session: nox.Session) -> None:
-    """Install the project."""
-    session.run("python", "-m", "pip", "install", "--editable", ".[dev,tests]")
-
-
-@nox.session
 def tests(session: nox.Session) -> None:
     """Run tests."""
     session.run("pytest")
@@ -39,10 +33,11 @@ def tests(session: nox.Session) -> None:
 @nox.session
 def lints(session: nox.Session) -> None:
     """Run lints."""
-    session.run("pre-commit", "run", "--all-files")
+    session.run("prek", "run", "--all-files")
     session.run("ruff", "format", ".")
     session.run("ruff", "check", "--fix", ".")
-    session.run("mypy", "--strict", "src/")
+    session.run("mypy", "--strict", "src/", "tests/")
+    session.run("ty", "check", ".")
 
 
 @nox.session

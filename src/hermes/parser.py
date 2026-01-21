@@ -160,7 +160,8 @@ def parse_rows(config: Config, rows: list[dict[str, str | float]]) -> list[Impor
         )
         shipment_id = row.get(mapping.get(Columns.REFERENCE))  # type: ignore[arg-type]
 
-        imported_shipment = ImportedShipment(shipment_id=shipment_id, ship_to=address)  # type: ignore[arg-type] # convert the upstream to a dataclass
+        # convert the upstream to a dataclass
+        imported_shipment = ImportedShipment(shipment_id=shipment_id, ship_to=address)  # type: ignore[arg-type] # ty: ignore[unused-ignore-comment
 
         items = {}
         if config.item_column_names is not None:

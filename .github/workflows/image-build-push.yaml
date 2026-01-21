@@ -26,6 +26,7 @@ jobs:
       id-token: write
       attestations: write
     outputs:
+      image: ${{ steps.meta.outputs.tags }}
       digest: ${{ steps.build-and-push.outputs.digest }}
     steps:
       - name: Setup Docker buildx
@@ -67,14 +68,21 @@ jobs:
           provenance: mode=max
           sbom: true
 
-  attest:
+  slsa_provenance:
     if: ${{ github.ref == 'refs/heads/main' || startswith(github.event.ref, 'refs/tags/') }}
     needs: build-push
     permissions:
+      contents: read
+      actions: read
       id-token: write
+      packages: write
       attestations: write
       artifact-metadata: write
-      packages: write
-    uses: ./.github/workflows/attest-reusable.yaml
+
+    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@f7dd8c54c2067bafc12ca7a55595d5ee9b75204a # v2.1.0
     with:
-      image-digest: ${{ needs.build-push.outputs.digest }}
+      image: ${{ needs.build-push.outputs.image }}
+      digest: ${{ needs.build-push.outputs.digest }}
+      registry-username: ${{ github.actor }}
+    secrets:
+      registry-password: ${{ secrets.GITHUB_TOKEN }}

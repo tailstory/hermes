@@ -6,7 +6,8 @@ readme = "README.md"
 authors = [
     { name = "Bradley Reynolds", email = "bradley.reynolds@tailstory.dev" },
 ]
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
 requires-python = ">=3.14"
 dependencies = [
     "pydantic-settings>=2.6.0",
@@ -54,7 +55,7 @@ tests = [
 ]
 
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools >= 80"]
 build-backend = "setuptools.build_meta"
 
 [tool.ruff]

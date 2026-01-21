@@ -3,11 +3,13 @@
 from dataclasses import asdict, dataclass, field
 from enum import Enum
 from logging import getLogger
+from typing import TYPE_CHECKING
 
 from darbia.shipping.types import Address, BillingInfo, Package, Shipment
 from darbia.shipping.types.models import BillToSelector
 
-from hermes.config import Config
+if TYPE_CHECKING:
+    from hermes.config import Config
 
 logger = getLogger(__name__)
 

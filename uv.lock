@@ -762,6 +762,19 @@ wheels = [
 ]
 
 [[package]]
+name = "releases"
+version = "2.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "semantic-version" },
+    { name = "sphinx" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/71/a7/37cbf3e9f7c2591b4ba0453ef916cb2df9c4fd3cd06d5ddab2175a4c023b/releases-2.1.1.tar.gz", hash = "sha256:ae0683c3f309931a3717c6976e0f079929d05d34214b432a95764e61367f58d1", size = 43034, upload-time = "2023-04-28T19:12:12.259Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2e/05/9e0553803381b24d6e807bcbc1d1c5c11610dfefa70772eee36773d40dbc/releases-2.1.1-py3-none-any.whl", hash = "sha256:cd06449c915ce9729aaebe19a836744998f83f9ebb0cf92e54949c88ab3402f1", size = 20969, upload-time = "2023-04-28T19:12:10.907Z" },
+]
+
+[[package]]
 name = "requests"
 version = "2.32.5"
 source = { registry = "https://pypi.org/simple" }
@@ -822,6 +835,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/6a/c5/abd840d4132fd51a12f594934af5eba1d5d27298a6f5b5d6c3be45301caf/ruff-0.14.13-py3-none-win32.whl", hash = "sha256:ef720f529aec113968b45dfdb838ac8934e519711da53a0456038a0efecbd680", size = 12919024, upload-time = "2026-01-15T20:14:43.647Z" },
     { url = "https://files.pythonhosted.org/packages/c2/55/6384b0b8ce731b6e2ade2b5449bf07c0e4c31e8a2e68ea65b3bafadcecc5/ruff-0.14.13-py3-none-win_amd64.whl", hash = "sha256:6070bd026e409734b9257e03e3ef18c6e1a216f0435c6751d7a8ec69cb59abef", size = 14097887, upload-time = "2026-01-15T20:15:01.48Z" },
     { url = "https://files.pythonhosted.org/packages/4d/e1/7348090988095e4e39560cfc2f7555b1b2a7357deba19167b600fdf5215d/ruff-0.14.13-py3-none-win_arm64.whl", hash = "sha256:7ab819e14f1ad9fe39f246cfcc435880ef7a9390d81a2b6ac7e01039083dd247", size = 13080224, upload-time = "2026-01-15T20:14:45.853Z" },
+]
+
+[[package]]
+name = "semantic-version"
+version = "2.6.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/72/83/f76958017f3094b072d8e3a72d25c3ed65f754cc607fdb6a7b33d84ab1d5/semantic_version-2.6.0.tar.gz", hash = "sha256:2a4328680073e9b243667b201119772aefc5fc63ae32398d6afafff07c4f54c0", size = 13919, upload-time = "2016-09-25T14:22:57.563Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/28/be/3a7241d731ba89063780279a5433f5971c1cf41735b64a9f874b7c3ff995/semantic_version-2.6.0-py3-none-any.whl", hash = "sha256:2d06ab7372034bcb8b54f2205370f4aa0643c133b7e6dbd129c5200b83ab394b", size = 14175, upload-time = "2016-09-25T14:23:00.423Z" },
 ]
 
 [[package]]
@@ -993,6 +1015,7 @@ dev = [
 ]
 docs = [
     { name = "furo" },
+    { name = "releases" },
     { name = "sphinx" },
     { name = "sphinx-autoapi" },
 ]
@@ -1024,6 +1047,7 @@ dev = [
 ]
 docs = [
     { name = "furo", specifier = ">=2024.5.6" },
+    { name = "releases", specifier = ">=2.1.1" },
     { name = "sphinx", specifier = ">=7.4.4" },
     { name = "sphinx-autoapi", specifier = ">=3.1.2" },
 ]

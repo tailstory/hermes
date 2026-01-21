@@ -1,12 +1,14 @@
 """Hermes."""
 
-from pathlib import Path
-from typing import Self
+from typing import TYPE_CHECKING, Self
 
 from hermes.config import Config
 from hermes.files import get_config_file_contents, get_data_file_contents
 
 from .parser import OutputRow, parse_rows, shipment_from_parts, shipment_to_output_rows
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 class Hermes:

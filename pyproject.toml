@@ -1,10 +1,10 @@
 [project]
-name = "darbiadev-hermes"
+name = "tailstory-hermes"
 version = "0.4.0"
 description = "Shipping tooling"
 readme = "README.md"
 authors = [
-    { name = "Bradley Reynolds", email = "bradley.reynolds@darbia.dev" },
+    { name = "Bradley Reynolds", email = "bradley.reynolds@tailstory.dev" },
 ]
 license = { text = "MIT" }
 requires-python = ">=3.14"
@@ -18,8 +18,8 @@ dependencies = [
 ]
 
 [project.urls]
-repository = "https://github.com/darbiadev/hermes/"
-documentation = "https://docs.darbia.dev/hermes/"
+repository = "https://github.com/tailstory/hermes/"
+documentation = "https://docs.tailstory.dev/hermes/"
 
 [project.scripts]
 hermes = "hermes.cli.main:app"

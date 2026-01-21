@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/project/darbiadev-hermes/${{ github.ref_name }}
+      url: https://pypi.org/project/tailstory-hermes/${{ github.ref_name }}
     permissions:
       id-token: write
 

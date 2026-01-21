@@ -253,77 +253,6 @@ wheels = [
 ]
 
 [[package]]
-name = "darbiadev-hermes"
-version = "0.4.0"
-source = { editable = "." }
-dependencies = [
-    { name = "darbiadev-shipping-types" },
-    { name = "openpyxl" },
-    { name = "pandas" },
-    { name = "pydantic-settings" },
-    { name = "rich" },
-    { name = "typer" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "mypy" },
-    { name = "nox" },
-    { name = "pandas-stubs" },
-    { name = "prek" },
-    { name = "ruff" },
-    { name = "ty" },
-]
-docs = [
-    { name = "furo" },
-    { name = "sphinx" },
-    { name = "sphinx-autoapi" },
-]
-tests = [
-    { name = "allure-pytest" },
-    { name = "coverage" },
-    { name = "httpx" },
-    { name = "pytest" },
-    { name = "pytest-alembic" },
-    { name = "pytest-randomly" },
-    { name = "trio" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "darbiadev-shipping-types", specifier = ">=0.4.0" },
-    { name = "openpyxl", specifier = ">=3.1.5" },
-    { name = "pandas", specifier = ">=2.2.3" },
-    { name = "pydantic-settings", specifier = ">=2.6.0" },
-    { name = "rich", specifier = ">=13.9.3" },
-    { name = "typer", specifier = ">=0.12.5" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "mypy", specifier = ">=1.10.1" },
-    { name = "nox", specifier = ">=2024.4.15" },
-    { name = "pandas-stubs", specifier = ">=2.2.3.241009" },
-    { name = "prek", specifier = ">=0.2.18" },
-    { name = "ruff", specifier = ">=0.5.2" },
-    { name = "ty", specifier = ">=0.0.12" },
-]
-docs = [
-    { name = "furo", specifier = ">=2024.5.6" },
-    { name = "sphinx", specifier = ">=7.4.4" },
-    { name = "sphinx-autoapi", specifier = ">=3.1.2" },
-]
-tests = [
-    { name = "allure-pytest", specifier = ">=2.15.2" },
-    { name = "coverage", specifier = ">=7.6.1" },
-    { name = "httpx", specifier = ">=0.27.0" },
-    { name = "pytest", specifier = ">=9.0.0" },
-    { name = "pytest-alembic", specifier = ">=0.11.0" },
-    { name = "pytest-randomly", specifier = ">=3.15.0" },
-    { name = "trio", specifier = ">=0.26.0" },
-]
-
-[[package]]
 name = "darbiadev-shipping-types"
 version = "0.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1225,6 +1154,77 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/42/39/f05f0ed54d451156bbed0e23eb0516bcad7cbb9f18b3bf219c786371b3f0/sqlalchemy-2.0.45-cp314-cp314t-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:cd337d3526ec5298f67d6a30bbbe4ed7e5e68862f0bf6dd21d289f8d37b7d60b", size = 3522029, upload-time = "2025-12-09T22:13:32.09Z" },
     { url = "https://files.pythonhosted.org/packages/54/0f/d15398b98b65c2bce288d5ee3f7d0a81f77ab89d9456994d5c7cc8b2a9db/sqlalchemy-2.0.45-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:9a62b446b7d86a3909abbcd1cd3cc550a832f99c2bc37c5b22e1925438b9367b", size = 3475142, upload-time = "2025-12-09T22:13:33.739Z" },
     { url = "https://files.pythonhosted.org/packages/bf/e1/3ccb13c643399d22289c6a9786c1a91e3dcbb68bce4beb44926ac2c557bf/sqlalchemy-2.0.45-py3-none-any.whl", hash = "sha256:5225a288e4c8cc2308dbdd874edad6e7d0fd38eac1e9e5f23503425c8eee20d0", size = 1936672, upload-time = "2025-12-09T21:54:52.608Z" },
+]
+
+[[package]]
+name = "tailstory-hermes"
+version = "0.4.0"
+source = { editable = "." }
+dependencies = [
+    { name = "darbiadev-shipping-types" },
+    { name = "openpyxl" },
+    { name = "pandas" },
+    { name = "pydantic-settings" },
+    { name = "rich" },
+    { name = "typer" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "mypy" },
+    { name = "nox" },
+    { name = "pandas-stubs" },
+    { name = "prek" },
+    { name = "ruff" },
+    { name = "ty" },
+]
+docs = [
+    { name = "furo" },
+    { name = "sphinx" },
+    { name = "sphinx-autoapi" },
+]
+tests = [
+    { name = "allure-pytest" },
+    { name = "coverage" },
+    { name = "httpx" },
+    { name = "pytest" },
+    { name = "pytest-alembic" },
+    { name = "pytest-randomly" },
+    { name = "trio" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "darbiadev-shipping-types", specifier = ">=0.4.0" },
+    { name = "openpyxl", specifier = ">=3.1.5" },
+    { name = "pandas", specifier = ">=2.2.3" },
+    { name = "pydantic-settings", specifier = ">=2.6.0" },
+    { name = "rich", specifier = ">=13.9.3" },
+    { name = "typer", specifier = ">=0.12.5" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "mypy", specifier = ">=1.10.1" },
+    { name = "nox", specifier = ">=2024.4.15" },
+    { name = "pandas-stubs", specifier = ">=2.2.3.241009" },
+    { name = "prek", specifier = ">=0.2.18" },
+    { name = "ruff", specifier = ">=0.5.2" },
+    { name = "ty", specifier = ">=0.0.12" },
+]
+docs = [
+    { name = "furo", specifier = ">=2024.5.6" },
+    { name = "sphinx", specifier = ">=7.4.4" },
+    { name = "sphinx-autoapi", specifier = ">=3.1.2" },
+]
+tests = [
+    { name = "allure-pytest", specifier = ">=2.15.2" },
+    { name = "coverage", specifier = ">=7.6.1" },
+    { name = "httpx", specifier = ">=0.27.0" },
+    { name = "pytest", specifier = ">=9.0.0" },
+    { name = "pytest-alembic", specifier = ">=0.11.0" },
+    { name = "pytest-randomly", specifier = ">=3.15.0" },
+    { name = "trio", specifier = ">=0.26.0" },
 ]
 
 [[package]]
